@@ -15,11 +15,13 @@
 	<th>商品名</th>
 	<th>価格</th>
 	</tr>
-	<tr>
-	<td><img alt="" src="images/an.jpg"></td>
-	<td><a href="detail.php">餡だんご</a></td>
-	<td>200円</td>
-	</tr>
+	<?php foreach ($list as $row){ ?>
+	<?php echo '<tr>'; ?>
+	<?php echo '<td><img src="images/'.$row['pict'].'" width="300"></td>'; ?>
+	<?php echo '<td><a href="detail.php?id='.$row['id'].'">'.$row['name'].'</a></td>'; ?>
+	<?php echo '<td>'.$row['price'].'</td>'; ?>
+	<?php echo '</tr>'; ?>
+	<?php } ?>
 	</table>
 </body>
 </html>
