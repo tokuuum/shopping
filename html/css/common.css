@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+h1 {
+	background:#ccc;
+}
+
+table,
+table th,
+table td {
+	border:1px solid #000;
+}
+
+table th {
+	background:#ccc;
+}
