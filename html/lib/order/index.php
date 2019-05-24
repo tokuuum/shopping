@@ -9,28 +9,32 @@
 </head>
 <body>
 	<h1>注文情報入力</h1>
+	<form method="post" action="confirm.php">
+	<input type="hidden" name="mode" value="send">
+	<input type="hidden" name="name" value="$name">
 	<table>
 		<tr>
 			<th>商品名</th>
-			<td>餡だんご</td>
+			<td><?php echo $name ?></td>
 		</tr>
 		<tr>
 			<th>数量</th>
-			<td><input type="text">個</td>
+			<td><input type="text" size="4">個</td>
 		</tr>
 		<tr>
 			<th>氏名</th>
-			<td><input type="text"></td>
+			<td><input type="text" size="20"></td>
 		</tr>
 		<tr>
     		<th>郵便番号</th>
-    		<td><input type="text"></td>
+    		<td><input type="text" size="20"></td>
 		</tr>
 		<tr>
     		<th>住所</th>
-    		<td><input type="text"></td>
+    		<td><input type="text" size="60"></td>
 		</tr>
 	</table>
-	<button type="submit">確認</button>
+	<input type="submit" value="確認">
+	</form>
 </body>
 </html>

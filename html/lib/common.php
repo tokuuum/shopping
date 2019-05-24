@@ -13,4 +13,17 @@ function get_conn() {
     }
 }
 
+// モード判定
+function get_mode(){
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        return isset($_GET['mode']) ? $_GET['mode'] : "";
+    }
+    else if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        return isset($_POST['mode']) ? $_POST['mode'] : "";
+    }
+    else {
+        return null;
+    }
+
+}
 ?>

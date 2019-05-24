@@ -13,21 +13,21 @@
 	<table>
 		<tr>
 			<th>写真</th>
-			<td><img alt="" src="images/an.jpg"></td>
+			<td><img alt="" src="<?php echo 'images/'.$pict ?>"></td>
 		</tr>
 		<tr>
 			<th>商品名</th>
-			<td></td>
+			<td><?php echo $name ?></td>
 		</tr>
 		<tr>
 			<th>商品説明</th>
-			<td></td>
+			<td><?php echo $detail ?></td>
 		</tr>
 		<tr>
     		<th>価格</th>
-    		<td></td>
+    		<td><?php echo $price.'円' ?></td>
 		</tr>
 	</table>
-	<button type="button" onclick="location.href='order/'">注文する</button>
+	<button type="button" id="btn_order" onclick="location.href='order/?id=<?php echo $id ?>&amp;name=<?php echo $name ?>'">注文する</button>
 </body>
 </html>
